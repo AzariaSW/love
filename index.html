@@ -1,201 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday My Love</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Poppins", sans-serif;
-      background: #e6becc;
-      color: #333;
-      overflow-x: hidden;
-    }
-    header {
-      text-align: center;
-      padding: 20px 20px;
-      background: #ffb3c6;
-      color: white;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .gallery > div:first-child {
-    grid-column: 1 / -1;
-    }
-    .polaroid {
-      background: #ffb3c6;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .polaroid:hover {
-      transform: scale(1.05);
-    }
-    .polaroid img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .love-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 25px;
-      background: #ff7aa2;
-      color: white;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .love-button:hover {
-      background: #ff4f85;
-    }
-    #reasonBox {
-      margin-top: 20px;
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #e6005c;
-      min-height: 40px;
-    }
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #ffb3c6;
-      margin-top: 50px;
-      color: white;
-    }
+  <title>Azaria and Blen</title>
+  <link rel="stylesheet" href="style.css">
+
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Happy Birthday, Mia Amore ❤️</h1>
-    <p>Here's a little website I made just for you.</p>
-  </header>
+  <div class="ambient" aria-hidden="true">
+    <div class="aurora"></div>
+    <div class="starfield" id="starfield"></div>
+    <div class="petals" id="petals"></div>
+  </div>
 
-  <section class="section">
-    <h2>Our Sweet Moments 📸</h2>
-    <p>Some of my favourite memories with you...</p>
+  <main class="site-shell">
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">For every season after this one</p>
+        <h1>Azaria &amp; Blen</h1>
+        <p>
+          A little world for our pictures, our laughter, and the quiet promise
+          that love can keep becoming more beautiful without needing a holiday
+          to explain it.
+        </p>
+        <div class="hero-actions">
+          <button class="action" type="button" data-scroll="#memories">Enter our memories</button>
+          <button class="action secondary" type="button" data-scroll="#letter">Read the note</button>
+        </div>
+      </div>
 
-    <div class="gallery">
-      <div class="polaroid" style="clear: right;" >
-        <img src="pictures/photo_2025-08-30_19-20-54.jpg" alt="Memory 1" />
-        <p>your smile makes my day.</p>
+      <div class="stage-wrap" aria-label="A rotating 3D gallery of memories">
+        <div class="halo"></div>
+        <div class="photo-orbit" id="photoOrbit"></div>
+        <div class="center-vow">
+          <div>
+            <strong>Always<br />you</strong>
+            <span>From Azaria, with a heart that keeps choosing Blen.</span>
+          </div>
+        </div>
       </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-08-30_19-20-55 (2).jpg" alt="Memory 2" />
-        <p>❤️</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-08-30_19-20-55.jpg" alt="Memory 3" />
-        <p>A day I'll never forget.</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-14_16-55-32.jpg" alt="Memory 2" />
-        <p>You looked so beautiful here.</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-30_15-58-52.jpg" alt="Memory 2" />
-        <p>My cool girl 😎</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-30_15-59-09.jpg" alt="Memory 2" />
-        <p>Don't listen to anyone.</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-30_15-59-16.jpg" alt="Memory 2" />
-        <p>I would never pose like this for another girl😭</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-30_15-59-32.jpg" alt="Memory 2" />
-        <p>Love❤️</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-30_15-59-51.jpg" alt="Memory 2" />
-        <p>I want to laugh with you for the rest of my life</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-30_16-00-02.jpg" alt="Memory 2" />
-        <p>always 😘</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-30_16-00-35.jpg" alt="Memory 2" />
-        <p>The first date.</p>
-      </div>
-      <div class="polaroid">
-        <img src="pictures/photo_2025-11-30_16-00-51.jpg" alt="Memory 2" />
-        <p>My favorite 💖.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" style="text-align: center;">
-    <h2>Reasons I Love You 💖</h2>
-    <p>Click the button for a new reason!</p>
-    <button class="love-button" onclick="showReason()">Show a Reason</button>
-    <div id="reasonBox"></div>
-  </section>
+    <section class="section" id="memories">
+      <div class="section-head">
+        <h2>Memory River</h2>
+        <p>
+          The gallery grows with us. Add more image paths in the photo list,
+          or preview new pictures instantly with the button below.
+        </p>
+      </div>
+      <div class="upload-zone">
+        <label class="file-button">
+          Add photos
+          <input id="photoInput" type="file" accept="image/*" multiple />
+        </label>
+        <span class="hint">New selections appear in the orbit and the river for this visit.</span>
+      </div>
+      <div class="memory-river" id="memoryRiver" aria-live="polite"></div>
+    </section>
 
-  
-  <section class="section" style="text-align: center;">
-    <h2>A Birthday Message for You 🎁</h2>
-    <p>
-      My love, on your special day, I want you to know how grateful I am for you.
-      You make my world brighter, my heart warmer, and my life sweeter. I love
-      you more than words can ever express.<br /><br/>
-      <strong><em>Happy Birthday, my dearest Blen! wish we spend too many more birthdays together.</em></strong>
-    </p>
-  </section>
+    <section class="section letter" id="letter">
+      <div>
+        <p class="eyebrow">A non-seasonal promise</p>
+        <h2>Not only for birthdays.</h2>
+      </div>
+      <div class="letter-panel">
+        <p>
+          My love, this page is no longer just a birthday card. It is a home
+          for the way I see us: bright, growing, playful, and steady. I want
+          every picture we add here to feel like another window opening in the
+          same house, another reason to say I am grateful for you, another
+          small proof that I would choose this love again.
+        </p>
+      </div>
+    </section>
 
-  <footer>
-    Made with ❤️ just for you
-    <p style="color: #e6005c;">From Azaria to Blen</p>
-  </footer>
+    <section class="section">
+      <div class="section-head">
+        <h2>Reasons</h2>
+        <p>Little truths that should never have to wait for a special day.</p>
+      </div>
+      <div class="reasons" id="reasons"></div>
+    </section>
 
-  <script>
-    const reasons = [
-      "You make me smile every single day.",
-      "You are incredibly kind and thoughtful.",
-      "You understand me better than anyone else.",
-      "You make everything more fun.",
-      "Your laugh is my favourite sound.",
-      "You inspire me to be better.",
-      "You are my safe place.",
-      "You are simply perfect to me.",
-      "You are my little angle",
-      "I love you for being you.",
-      "You complete me in every way.",
-      "You are my best friend and soulmate.",
-      "You are my guide in everything",
-      "You are my motive."
-    ];
+    <section class="finale">
+      <div class="finale-inner">
+        <h2>My love, my favorite place.</h2>
+        <p>
+          May this keep growing with more photographs, more ordinary miracles,
+          more inside jokes, and more days where being loved by you feels like
+          the most beautiful thing in my life.
+        </p>
+        <div class="signature">From Azaria to Blen</div>
+      </div>
+    </section>
+  </main>
 
-    var i=0;
-    function showReason() {
-      const box = document.getElementById("reasonBox");
-      box.textContent = reasons[i];
-      i++;
-      if(i==reasons.length){i=0;}
-    }
+  <script src="script.js"></script>
+
   </script>
 </body>
+
 </html>
